@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && echo 'jessberfday.robspectre.com' > dist/CNAME",
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
