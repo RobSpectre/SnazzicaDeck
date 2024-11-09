@@ -219,6 +219,6 @@ export default {
 
 .copy {
   font-family: 'Noto Sans', sans-serif;
-  @apply text-lg px-4 text-left;
+  @apply text-base px-4 text-left;
 }
 </style>
