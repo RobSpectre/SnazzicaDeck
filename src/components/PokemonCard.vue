@@ -15,10 +15,21 @@ VideoSlide(src='/video/background.mp4')
           :style="{ backgroundColor: `#${background}` }"
         )
           slot
+  a(:href='src')
+    button.inline-flex.items-center.gap-x-2.rounded-md.bg-sky-600.text-sm.font-semibold.text-white.shadow-sm(
+  class="hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 px-3.5 py-2.5"
+  type="button"
+    )
+      ArrowDownTrayIcon.h-5.w-5(
+        class='ml-0.5'
+        aria-hidden="true"
+      )
+       | Download
 </template>
 
 <script>
 import { VueFlip } from 'vue-flip'
+import { ArrowDownTrayIcon } from '@heroicons/vue/20/solid'
 
 import Reveal from '@/components/base/Reveal.vue'
 import VideoSlide from '@/components/base/VideoSlide.vue'
@@ -27,7 +38,8 @@ export default {
   name: 'PokemonCard',
   components: {
     VueFlip,
-    VideoSlide
+    VideoSlide,
+    ArrowDownTrayIcon
   },
   props: {
     src: String,
